@@ -41,7 +41,7 @@ Best Model: Random Forest
 Score: 86.76
 ```
 
-code reads in ``train.csv`` and uses to train multiple classification models. Applies trained models to passenger data in ``test.csv`` and writes out prediction on the survival of each passenger for the best model in ``submission.csv`` for submission to Kaggle's contest.
+code reads in ``train.csv`` and uses to train multiple classification models. These trained models are then applied to passenger data in ``test.csv`` and writes out prediction on the survival of each passenger for the best model in ``submission.csv`` for submission to Kaggle's contest.
 
 
 ### Resources
