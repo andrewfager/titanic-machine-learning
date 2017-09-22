@@ -237,7 +237,9 @@ class predict_survival():
             self.score = None
             self.Y_pred = None
 
-        print str(model)+' score: '+str(self.score)
+        print 'Model: '+str(model)
+        print 'Score: '+str(self.score)
+        print '-------------'
         return
 
     def write_submission(self, pNf='submission.csv'):
@@ -248,14 +250,14 @@ class predict_survival():
             })
         submission.to_csv(pNf, index=False)
 
-data_obj = data('train.csv','test.csv')
+passengers = data('train.csv','test.csv') # reads in and prepares data for modeling
 
 model_list = []
-model_obj = predict_survival(data_obj,'Logistic Regression')
+model_obj = predict_survival(passengers,'Logistic Regression')
 model_list.append(model_obj)
-model_obj = predict_survival(data_obj,'Support Vector Machines')
+model_obj = predict_survival(passengers,'Support Vector Machines')
 model_list.append(model_obj)
-model_obj = predict_survival(data_obj,'Random Forest')
+model_obj = predict_survival(passengers,'Random Forest')
 model_list.append(model_obj)
 
 # Search for best model
@@ -266,5 +268,6 @@ for model in model_list:
         best_score = model.score
         best_model = model
 
-print 'Best Model: '+str(best_model.model)+', Score: '+str(best_score)
+print 'Best Model: '+str(best_model.model)
+print 'Score: '+str(best_score)
 best_model.write_submission()
