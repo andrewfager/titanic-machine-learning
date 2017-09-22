@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Kaggle's Titanic Machine Learning problem. The (somewhat morbid) task is to predict if a passenger will survive given a number attributes that passenger. 
+This repository tackles Kaggle's Titanic Machine Learning problem. The (somewhat morbid) task is to predict if a passenger will survive given a number attributes for that passenger. 
 
 ``titanic-ml.py`` reads in ``train.csv`` which contains a list of passengers their attributes (e.g. Age, Gender, Cabin Type, etc) and if they survived. This data is then used to train a number classification algorithms and build models that are used to predict survival of each passenger listed in ``test.csv``.
 
