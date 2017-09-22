@@ -26,7 +26,22 @@ The accuracy of each algorithm is reported in order to choose the optimal algori
 python titanic-ml.py
 ```
 
-reads in ``train.csv`` and uses to train models. Applies trained models to passenger data in ``test.csv`` and writes out prediction on the survival of each passenger in ``submission.csv`` for submission to Kaggle's contest.
+Example output:
+```
+Model: Logistic Regression
+Score: 80.36
+-------------
+Model: Support Vector Machines
+Score: 83.84
+-------------
+Model: Random Forest
+Score: 86.76
+-------------
+Best Model: Random Forest
+Score: 86.76
+```
+
+code reads in ``train.csv`` and uses to train multiple classification models. Applies trained models to passenger data in ``test.csv`` and writes out prediction on the survival of each passenger for the best model in ``submission.csv`` for submission to Kaggle's contest.
 
 
 ### Resources
